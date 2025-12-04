@@ -6,6 +6,8 @@ import logo from "@/public/assets/outline.png";
 import Image from "next/image";
 import Lightning from "../ui/reactbits/Lightning";
 import PillButton from "./pillBtn";
+import GlitchText from "../ui/reactbits/GlitchText";
+import AnimatedContent from "../animations/ContentAnimation";
 
 const LandingSection = () => {
   return (
@@ -22,22 +24,99 @@ const LandingSection = () => {
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.content}>
-          <div className={styles.pillBtnContainer}>
-            <PillButton children="100% Natural" />
-          </div>
+          <AnimatedContent
+            distance={250}
+            direction="horizontal"
+            reverse={false}
+            duration={0.8}
+            ease="bounce.out"
+            initialOpacity={0}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+            delay={0.5}
+          >
+            <div className={styles.pillBtnContainer}>
+              <PillButton children="100% Natural" />
+            </div>
+          </AnimatedContent>
+
           <div className={styles.h2Container}>
-            <h2>Calm Meets Energy</h2>
-            <Image src={logo} alt="bottle" className={styles.logo} />
+            <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              reverse={false}
+              duration={0.8}
+              ease="bounce.out"
+              initialOpacity={0}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+              delay={0.75}
+            >
+              <h2>
+                <GlitchText
+                  speed={2.7}
+                  enableShadows={false}
+                  enableOnHover={true}
+                  className="custom-class"
+                >
+                  Calm Meets Energy
+                </GlitchText>
+              </h2>
+              <Image src={logo} alt="bottle" className={styles.logo} />
+            </AnimatedContent>
           </div>
-          <h1>Calming Energy For the Overactive Mind.</h1>
-          <p>
-            X is a 100% natural calming energy drink that relaxes your mind
-            while keeping you focused—without sugar or jitters.
-          </p>
-          <div className={styles.contentEndBtn}>
-            <button>See How It Works</button>
-            <Image src={bottle} alt="bottle" className={styles.btnImg} />
-          </div>
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={false}
+            duration={0.8}
+            ease="bounce.out"
+            initialOpacity={0}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+            delay={1}
+          >
+            <h1>Calming Energy For the Overactive Mind.</h1>
+          </AnimatedContent>
+
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={false}
+            duration={0.8}
+            ease="bounce.out"
+            initialOpacity={0}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+            delay={1.25}
+          >
+            <p>
+              X is a 100% natural calming energy drink that relaxes your mind
+              while keeping you focused—without sugar or jitters.
+            </p>
+          </AnimatedContent>
+
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={false}
+            duration={0.8}
+            ease="bounce.out"
+            initialOpacity={0}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+            delay={1.5}
+          >
+            <div className={styles.contentEndBtn}>
+              <button>See How It Works</button>
+              <Image src={bottle} alt="bottle" className={styles.btnImg} />
+            </div>
+          </AnimatedContent>
         </div>
         <div className={styles.bottleContainer}>
           <h2>x</h2>
