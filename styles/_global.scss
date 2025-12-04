@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "inter";
+  src: url("/fonts/inter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aeonik";
+  src: url("/fonts/aeonik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "manrope";
+  src: url("/fonts/manrope.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "orbitron";
+  src: url("/fonts/orbitron.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --green: #bfebd7;
+  --charcoal: #050608;
+  --gold: #a28b41;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #ffffff;
+    --black: #000000;
+  }
+}
+
+body {
+  background: #050505;
+  color: var(--white);
+  font-family: "manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+
+span {
+  color: var(--para);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--white);
+  font-family: "aeonik", sans-serif;
+}
+
+p {
+  color: var(--parawhite);
+}
+
+button,
+img,
+svg {
+  cursor: pointer !important;
+}
+
+
+.navbar {
+  padding: 1rem;
+
+  .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    h1{
+      font-size: 3rem;
+      color: #e3c743;
+      font-family: 'aeonik', sans-serif !important;
+      font-weight: 800;
+    }
+  }
+
+  a {
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+  }
+
+  .buynowBtn {
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(36, 71, 55, 0.4); /* mint glow */
+    }
+
+    &:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px 10px rgba(36, 71, 55, 0.3);
+    }
+  }
+}
+
+
+// span {
+//     background: linear-gradient(90deg,
+//             rgba(2, 0, 36, 1) -30%,
+//             rgba(31, 83, 198, 1) 30%,
+//             rgba(0, 212, 255, 1) 100%);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     color: transparent;
+//     /* Makes the text color transparent, showing the background */
+//     display: inline-block;
+//     /* Needed to ensure the gradient covers the text */
+// }
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--lightblue);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b5b4b4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
