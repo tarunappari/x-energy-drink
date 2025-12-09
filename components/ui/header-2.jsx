@@ -62,7 +62,7 @@ export function Header() {
       >
         <div className="logo">
           <Image src={logo} alt="logo" width={60} />
-          <h1>X</h1>
+          {/* <h1>X</h1> */}
         </div>
         <div className="hidden items-center gap-2 md:flex">
           {links.map((link, i) => (

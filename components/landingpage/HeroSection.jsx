@@ -25,14 +25,14 @@ const LandingSection = () => {
       <div className={styles.contentContainer}>
         <div className={styles.content}>
           <AnimatedContent
-            distance={250}
-            direction="horizontal"
-            reverse={false}
+            distance={50}
+            direction="vertical"
+            reverse={true}
             duration={0.8}
             ease="bounce.out"
             initialOpacity={0}
             animateOpacity
-            scale={1.1}
+            scale={1}
             threshold={0.2}
             delay={0.5}
           >
@@ -43,14 +43,14 @@ const LandingSection = () => {
 
           <div className={styles.h2Container}>
             <AnimatedContent
-              distance={150}
-              direction="horizontal"
-              reverse={false}
+              distance={50}
+              direction="vertical"
+              reverse={true}
               duration={0.8}
               ease="bounce.out"
               initialOpacity={0}
               animateOpacity
-              scale={1.1}
+              scale={1}
               threshold={0.2}
               delay={0.75}
             >
@@ -61,54 +61,64 @@ const LandingSection = () => {
                   enableOnHover={true}
                   className="custom-class"
                 >
-                  Calm Meets Energy
+                  Stay Chill, Stay Sharp, Stay You.
                 </GlitchText>
               </h2>
               <Image src={logo} alt="bottle" className={styles.logo} />
             </AnimatedContent>
           </div>
           <AnimatedContent
-            distance={150}
-            direction="horizontal"
-            reverse={false}
+            distance={50}
+            direction="vertical"
+            reverse={true}
             duration={0.8}
             ease="bounce.out"
             initialOpacity={0}
             animateOpacity
-            scale={1.1}
+            scale={1}
             threshold={0.2}
             delay={1}
           >
-            <h1>Calming Energy For the Overactive Mind.</h1>
+            <h1>
+              Calming Energy For the Overactive Mind.
+              <span className={styles.thunder}>⚡</span>
+            </h1>
           </AnimatedContent>
 
           <AnimatedContent
-            distance={150}
-            direction="horizontal"
-            reverse={false}
+            distance={50}
+            direction="vertical"
+            reverse={true}
             duration={0.8}
             ease="bounce.out"
             initialOpacity={0}
             animateOpacity
-            scale={1.1}
+            scale={1}
             threshold={0.2}
             delay={1.25}
           >
-            <p>
-              X is a 100% natural calming energy drink that relaxes your mind
-              while keeping you focused—without sugar or jitters.
-            </p>
+            <div className={styles.paraPoints}>
+              <p>
+                A refreshing natural drink that relaxes your mind,boosts mental
+                clarity and keeps your energy steady
+              </p>
+              <div>
+                <span>⚡No Sugar - No Crash</span>
+                <span>⚡Calm + Focus Dual Action</span>
+                <span>⚡Clean Long-Lasting Energy</span>
+              </div>
+            </div>
           </AnimatedContent>
 
           <AnimatedContent
-            distance={150}
-            direction="horizontal"
-            reverse={false}
+            distance={50}
+            direction="vertical"
+            reverse={true}
             duration={0.8}
             ease="bounce.out"
             initialOpacity={0}
             animateOpacity
-            scale={1.1}
+            scale={1}
             threshold={0.2}
             delay={1.5}
           >
@@ -119,7 +129,9 @@ const LandingSection = () => {
           </AnimatedContent>
         </div>
         <div className={styles.bottleContainer}>
-          <h2>x</h2>
+          <h2>
+            x <span></span>
+          </h2>
           <Image src={bottle} alt="bottle" className={styles.img1} />
           <Image src={bottle} alt="bottle" className={styles.img2} />
         </div>
