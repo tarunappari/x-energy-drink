@@ -12,15 +12,8 @@ import AnimatedContent from "../animations/ContentAnimation";
 const LandingSection = () => {
   return (
     <div className={styles.heroContainer}>
-      <Header />
       <div className={styles.lightingBg}>
-        <Lightning
-          hue={162}
-          xOffset={-1.5}
-          speed={0.7}
-          intensity={0.1}
-          size={0.4}
-        />
+        <Lightning hue={162} xOffset={-1.6} speed={0.6} intensity={0.2} size={0.6} />
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.content}>

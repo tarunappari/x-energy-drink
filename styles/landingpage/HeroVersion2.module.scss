@@ -1,0 +1,154 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 70px; 
+
+  .contentContainer {
+    padding-top: 5rem;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid green;
+    .content {
+      border: 2px solid blue;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 3rem;
+      h1 {
+        display: flex;
+        gap: 1rem;
+        font-size: 7rem;
+      }
+
+      h2 {
+        font-weight: 300 !important;
+      }
+
+      h3 {
+        font-weight: 300 !important;
+      }
+
+      .contentEndBtn {
+        display: flex;
+        align-self: flex-start;
+        position: relative;
+        margin-top: 1rem;
+        .btnImg {
+          position: inherit;
+          top: 0rem;
+          right: 1rem;
+          width: 2rem;
+          transform: rotate(10deg);
+        }
+        button {
+          --black: #161616;
+          --green: #3ae89a;
+
+          background-color: var(--green);
+          padding: 0.6rem 1.25rem;
+          color: var(--black);
+          font-weight: 700;
+          border-radius: 0.5rem;
+          font-size: 0.95rem;
+          border: none;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(58, 232, 154, 0.3);
+
+          &:hover {
+            background-color: #2fd789;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(58, 232, 154, 0.5);
+          }
+
+          &:focus-visible {
+            outline: 2px dashed var(--green);
+            outline-offset: 4px;
+          }
+        }
+      }
+
+      p {
+        font-size: 1.02rem;
+      }
+    }
+
+    .bottleContainer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid red;
+
+      h2 {
+        position: absolute;
+        font-size: 65rem;
+        color: #2b2e26;
+        height: 20rem;
+        top: -40rem;
+        opacity: 0.75;
+        z-index: 0;
+        transition: 0.3s ease;
+      }
+
+      img {
+        position: relative;
+        max-width: 15rem !important;
+        height: 27.5rem !important;
+        z-index: 9;
+        filter: drop-shadow(0px 25px 40px rgba(0, 0, 0, 0.8));
+        will-change: transform, opacity;
+      }
+
+      .img1 {
+        top: 3rem;
+        right: -5rem;
+        animation: bottleBounceLeft 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.1s
+          forwards;
+          transform: rotate(-15deg);
+      }
+
+      .img2 {
+        top: 5rem;
+        left: -2rem;
+        animation: bottleBounceRight 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.25s
+          forwards;
+          transform: rotate(15deg);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 25rem;
+        height: 25rem;
+        background: radial-gradient(
+          circle at center,
+          rgba(0, 255, 195, 0.5) 0%,
+          /* bright neon mint center */ rgba(0, 255, 170, 0.25) 30%,
+          /* mid glow */ rgba(0, 255, 140, 0.12) 60%,
+          /* soft outer fade */ transparent 100%
+        );
+        filter: blur(70px); /* strong blur for realistic diffusion */
+        opacity: 0.95;
+        z-index: 1;
+        top: -5rem;
+        transform: translateY(-3rem);
+        transition: opacity 0.4s ease, filter 0.4s ease;
+      }
+
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   bottom: -30rem;
+      //   left: -15rem;
+      //   width: 300%;
+      //   height: 35rem; /* adjust coverage (30–50%) */
+      //   background: linear-gradient(to top, #000000 0%, transparent 100%);
+      //   pointer-events: none;
+      //   z-index: 2; /* sits in front of the X text */
+      // }
+    }
+  }
+}

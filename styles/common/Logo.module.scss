@@ -1,0 +1,53 @@
+.logoWrap {
+  position: relative;
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  color: var(--green);
+  position: relative;
+
+  .container {
+    position: absolute;
+    top: 0rem;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    background-color: #78867a;
+    padding-left: 2rem;
+
+    img {
+      width: 4rem;
+    }
+
+    .logoText {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1rem;
+      .brandName {
+        color: var(--green);
+        font-weight: 900;
+        font-family: "obitron", sans-serif;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: -0.75rem;
+      }
+      .tagline {
+        font-weight: 900;
+        font-size: 0.75rem;
+        color: var(--gren);
+      }
+
+      .edge {
+        --p: 50px; /* control the shape (can be percentage) */
+        height: 128px;
+        aspect-ratio: 1;
+        clip-path: polygon(0 0, 100% 0, calc(100% - var(--p)) 100%, 0 100%);
+        background: #78867a;
+        position: absolute;
+        right: -3.3rem;
+        top: -2rem;
+        z-index: -1;
+      }
+    }
+  }
+}

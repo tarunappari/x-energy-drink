@@ -214,17 +214,17 @@
       //   z-index: 1;
       // }
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -30rem;
-        left: -15rem;
-        width: 300%;
-        height: 35rem; /* adjust coverage (30–50%) */
-        background: linear-gradient(to top, #000000 0%, transparent 100%);
-        pointer-events: none;
-        z-index: 2; /* sits in front of the X text */
-      }
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   bottom: -30rem;
+      //   left: -15rem;
+      //   width: 300%;
+      //   height: 35rem; /* adjust coverage (30–50%) */
+      //   background: linear-gradient(to top, #000000 0%, transparent 100%);
+      //   pointer-events: none;
+      //   z-index: 2; /* sits in front of the X text */
+      // }
     }
   }
 }

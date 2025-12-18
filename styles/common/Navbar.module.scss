@@ -1,0 +1,198 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ced2cf;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    background: #6c6e6d;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+    .edge {
+      --p: 50px; /* control the shape (can be percentage) */
+      height: 110px;
+      aspect-ratio: 1;
+      clip-path: polygon(0 0, 100% 0, calc(100% - var(--p)) 100%, 0 100%);
+      background: #6c6e6d;
+      position: absolute;
+      right: -5rem;
+      top: -2rem;
+      z-index: -1;
+    }
+
+    // Left edge styling
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(
+        180deg,
+        var(--green, #3ae89a) 0%,
+        #2fd789 50%,
+        var(--green, #3ae89a) 100%
+      );
+      border-radius: 2px 0 0 2px;
+    }
+  }
+
+  .logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+
+    img {
+      width: auto;
+      height: 75px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 8px rgba(58, 232, 154, 0.3));
+    }
+  }
+
+  .logoText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    position: relative;
+    z-index: 2;
+    .brandName {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--green);
+      font-family: "orbitron",sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+      text-align: center;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .tagline {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: var(--green, #3ae89a);
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  .navList {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    padding-right: 4rem;
+    justify-content: flex-end;
+  }
+
+  .navItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .navLink {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--green, #3ae89a);
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--green, #3ae89a);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    .arrow {
+      font-size: 0.6rem;
+      margin-left: 0.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .arrow {
+      transform: translateY(2px);
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .navList {
+      display: none;
+    }
+
+    .logoContainer {
+      padding: 0.4rem 1rem 0.4rem 0.4rem;
+    }
+
+    .logoBox img {
+      height: 35px;
+    }
+
+    .logoText {
+      .brandName {
+        font-size: 0.9rem;
+      }
+
+      .tagline {
+        font-size: 0.55rem;
+      }
+    }
+  }
+}
