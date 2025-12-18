@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import styles from "@/styles/landingpage/HeroVersion3.module.scss";
 import bottle from "@/public/assets/bottle.png";
 import Image from "next/image";
@@ -9,6 +10,30 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const HeroSectionVersion3 = () => {
+  const bottleRef = useRef(null);
+
+  useEffect(() => {
+    if (!bottleRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(bottleRef.current, {
+        scrollTrigger: {
+          trigger: bottleRef.current,
+          start: "top top+=70",
+          end: "bottom top+=80",
+          scrub: 1,
+          markers: false,
+        },
+        y: "85vh", 
+        x:'25vw',
+        rotation: -20,
+        ease: "none",
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
@@ -46,7 +71,13 @@ const HeroSectionVersion3 = () => {
           <div className={styles.bottles}>
             <h1>x</h1>
             <Image src={bottle} alt="bottle" className={styles.img1} />
-            <Image src={bottle} alt="bottle" className={styles.img2} />
+            <Image
+              ref={bottleRef}
+              src={bottle}
+              alt="bottle"
+              className={styles.img2}
+              id="moving-bottle"
+            />
             <span className={styles.shadow}></span>
           </div>
           <div className={styles.ingredientsContent}>
