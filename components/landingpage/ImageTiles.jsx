@@ -14,8 +14,25 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
+      mm.add("(min-width: 1700px)", () => {
+        gsap.to(bottleRef.current, {
+          scrollTrigger: {
+            trigger: bottleRef.current,
+            start: "top top+=60",
+            end: "bottom top+=70",
+            scrub: 1,
+          },
+          y: "85vh",
+          x: "40vw",
+          scale: 2.5,
+          rotation: 6.5,
+          opacity: 1,
+          ease: "none",
+        });
+      });
+
       // DESKTOP (>= 1024px)
-      mm.add("(min-width: 1024px)", () => {
+      mm.add("(min-width: 1024px) and (max-width: 1699px)", () => {
         gsap.to(bottleRef.current, {
           scrollTrigger: {
             trigger: bottleRef.current,
@@ -23,10 +40,10 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
             end: "bottom top+=40",
             scrub: 1,
           },
-          y: "95vh",
-          x: "35vw",
-          scale: 1.9,
-          rotation: -15,
+          y: "100vh",
+          x: "42vw",
+          scale: 1.75,
+          rotation: 6,
           opacity: 1,
           ease: "none",
         });
@@ -157,14 +174,14 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
 
   return (
     <motion.div
-      className="relative flex items-center justify-center w-64 h-74 my-8"
+      className="relative flex items-center justify-center w-48 h-70 my-8"
       variants={containerVariants}
       initial="initial"
       animate="animate"
     >
       {/* Left Image */}
       <motion.div
-        className="absolute w-48 h-68 origin-bottom-right overflow-hidden rounded-xl shadow-lg bg-white"
+        className="absolute w-48 h-58 origin-bottom-right overflow-hidden rounded-xl shadow-lg bg-white"
         variants={leftImageVariants}
         whileHover="hover"
         animate="animate"
@@ -181,7 +198,7 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
 
       {/* Middle Image */}
       <motion.div
-        className="absolute w-52 h-68 origin-bottom-left overflow-hidden rounded-xl shadow-lg bg-white"
+        className="absolute w-42 h-58 origin-bottom-left overflow-hidden rounded-xl shadow-lg bg-white"
         variants={middleImageVariants}
         whileHover="hover"
         animate="animate"
@@ -198,7 +215,7 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
 
       {/* Right Image */}
       <motion.div
-        className={`absolute w-48 h-68 rounded-xl shadow-lg bg-white ${styles.thirdImageContainer}`}
+        className={`absolute w-40 h-58 rounded-xl shadow-lg bg-white ${styles.thirdImageContainer}`}
         variants={rightImageVariants}
         // whileHover="hover"
         // animate="animate"

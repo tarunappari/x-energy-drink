@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
   padding: 2rem;
-  margin-top: 4rem;
+  margin-top: 0rem;
 
   .titleContent {
     padding: 3rem 5rem;
@@ -23,6 +23,7 @@
   .bottomContainer {
     background-color: #7f9685;
     margin: 4rem 0rem;
+    margin-top: 7rem;
     border-radius: 2rem;
     display: flex;
     flex-direction: row-reverse;
@@ -63,9 +64,42 @@
         transform: rotate(26deg);
         right: -2rem;
         top: 2rem;
-        filter: drop-shadow(10px 60px 40px rgba(81, 80, 80, 0.8));
+        filter: drop-shadow(15px 15px 20px rgb(103, 132, 108, 0.7));
         z-index: 89;
         will-change: transform, opacity;
+      }
+    }
+  }
+}
+
+@media (max-width: 1550px) {
+  .container {
+    .bottomContainer {
+      .bottomContainerContent {
+        h2 {
+          font-size: 2rem;
+          width: 40rem;
+        }
+      }
+
+      .imgRevealContainer {
+        position: relative;
+        left: 10rem;
+
+        // .thirdImageContainer{
+        //   left: -0rem;
+        //   transform: rotate(-30deg);
+        // }
+
+        .bottleImg {
+          position: absolute;
+          transform: rotate(26deg);
+          right: -2rem;
+          top: 2rem;
+          filter: drop-shadow(15px 15px 20px rgb(103, 132, 108, 0.7));
+          z-index: 89;
+          will-change: transform, opacity;
+        }
       }
     }
   }

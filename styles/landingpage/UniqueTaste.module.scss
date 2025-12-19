@@ -69,7 +69,7 @@
       }
     }
 
-     .bottle {
+    .bottle {
       display: none;
       position: absolute;
       left: 43%;
@@ -82,12 +82,17 @@
     }
   }
 
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     width: 80vw;
     height: 0.1rem;
-    background-color: var(--palegreen);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--palegreen) 50%,
+      transparent 100%
+    );
     opacity: 0.1;
     bottom: 2rem;
   }
