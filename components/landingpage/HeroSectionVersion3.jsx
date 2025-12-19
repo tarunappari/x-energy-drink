@@ -4,10 +4,11 @@ import styles from "@/styles/landingpage/HeroVersion3.module.scss";
 import bottle from "@/public/assets/bottle.png";
 import Image from "next/image";
 import RotatingText from "../ui/reactbits/RotatingText";
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const HeroSectionVersion3 = () => {
   const bottleRef = useRef(null);
@@ -24,8 +25,8 @@ const HeroSectionVersion3 = () => {
           scrub: 1,
           markers: false,
         },
-        y: "105vh", 
-        x:'-7rem',
+        y: "105vh",
+        x: "-7rem",
         rotation: -90,
         ease: "none",
       });
@@ -34,16 +35,61 @@ const HeroSectionVersion3 = () => {
     return () => ctx.revert();
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <div className={styles.container}>
-      <div className={styles.contentContainer}>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className={styles.container}
+    >
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className={styles.contentContainer}
+      >
         <div className={styles.content}>
-          <h3>100% Natural</h3>
-          <h1>CALMING ENERGY</h1>
+          <motion.h3 variants={itemVariants}>100% Natural</motion.h3>
+          <motion.h1
+            initial={{ y: 20, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 0.3,
+              transition: {
+                duration: 0.5,
+                ease: "easeOut",
+              },
+            }}
+          >
+            CALMING ENERGY
+          </motion.h1>
         </div>
         <div className={styles.bottleContainer}>
           <div className={styles.bottleContent}>
-            <h1>
+            <motion.h1 variants={itemVariants}>
               Stay
               <RotatingText
                 texts={["Chill", "Sharp", "You!"]}
@@ -57,49 +103,66 @@ const HeroSectionVersion3 = () => {
                 transition={{ type: "spring", damping: 30, stiffness: 400 }}
                 rotationInterval={2000}
               />
-            </h1>
-            <h2>Healthy Energy For the Overactive Mind.</h2>
-            <p>
+            </motion.h1>
+            <motion.h2 variants={itemVariants}>
+              Healthy Energy For the Overactive Mind.
+            </motion.h2>
+            <motion.p variants={itemVariants}>
               A refreshing natural drink that relaxes your mind,boosts mental
               clarity and keeps your energy steady
-            </p>
-            <div className={styles.contentEndBtn}>
+            </motion.p>
+            <motion.div
+              variants={itemVariants}
+              className={styles.contentEndBtn}
+            >
               <button>See How It Works</button>
               <Image src={bottle} alt="bottle" className={styles.btnImg} />
-            </div>
+            </motion.div>
           </div>
-          <div className={styles.bottles}>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay:0.15,
+                duration: 0.5,
+                ease: "easeOut",
+              },
+            }}
+            className={styles.bottles}
+          >
             <h1>x</h1>
-            <Image src={bottle} alt="bottle" className={styles.img1} />
-            <Image
+            <img src={bottle.src} alt="bottle" className={styles.img1} />
+            <img
               ref={bottleRef}
-              src={bottle}
+              src={bottle.src}
               alt="bottle"
               className={styles.img2}
               id="moving-bottle"
             />
             <span className={styles.shadow}></span>
-          </div>
+          </motion.div>
           <div className={styles.ingredientsContent}>
-            <span>
+            <motion.span variants={itemVariants}>
               <i>🌿</i> L-Theanine
-            </span>
-            <span>
+            </motion.span>
+            <motion.span variants={itemVariants}>
               <i>🍃</i> Ashwagandha
-            </span>
-            <span>
+            </motion.span>
+            <motion.span variants={itemVariants}>
               <i>Mg</i> Magnesium
-            </span>
-            <span>
+            </motion.span>
+            <motion.span variants={itemVariants}>
               <i>
                 <i className={styles.thunder}></i>
               </i>
               Zero Crash
-            </span>
+            </motion.span>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
