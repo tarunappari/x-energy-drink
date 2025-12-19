@@ -4,6 +4,8 @@ import NavbarVersion2 from '@/components/common/NavbarVersion2';
 import Experience from '@/components/landingpage/Experience';
 import HeroSectionVersion3 from '@/components/landingpage/HeroSectionVersion3';
 import Ingredients from '@/components/landingpage/Ingredients';
+import UniqueTaste from '@/components/landingpage/UniqueTaste';
+import Why from '@/components/landingpage/Why';
 import React from 'react'
 
 const page = () => {
@@ -14,7 +16,9 @@ const page = () => {
       {/* <Navbar /> */}
       <HeroSectionVersion3 />
       <Experience />
+      <UniqueTaste />
       <Ingredients />
+      <Why />
     </div>
   )
 }

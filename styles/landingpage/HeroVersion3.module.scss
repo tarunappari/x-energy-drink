@@ -95,8 +95,8 @@
           top: 22%;
           right: 13%;
           transform: rotate(15deg);
-          filter: drop-shadow(-10px 60px 40px rgba(81, 80, 80, 0.8));
-          z-index: 9999;
+          filter: drop-shadow(10px 60px 40px rgba(81, 80, 80, 0.8));
+          z-index: 89;
           will-change: transform;
         }
 
@@ -114,7 +114,7 @@
           );
           transform: translateX(-50%);
           filter: blur(6px);
-          z-index: 99;
+          z-index: 79;
         }
 
         &::before {
@@ -436,8 +436,8 @@
             left: 5%;
           }
           img {
-            max-width: 11rem !important;
-            height: 20rem !important;
+            max-width: 12rem !important;
+            height: 22rem !important;
           }
           .img1 {
             top: -3rem;

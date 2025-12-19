@@ -24,9 +24,9 @@ const HeroSectionVersion3 = () => {
           scrub: 1,
           markers: false,
         },
-        y: "85vh", 
-        x:'25vw',
-        rotation: -20,
+        y: "105vh", 
+        x:'-7rem',
+        rotation: -90,
         ease: "none",
       });
     });

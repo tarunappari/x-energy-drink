@@ -1,4 +1,72 @@
-.container{
-  border: 3px solid red;
+.container {
   min-height: 100vh;
+  padding: 2rem;
+  margin-top: 4rem;
+
+  .titleContent {
+    padding: 3rem 5rem;
+    h2 {
+      font-size: 2.5rem;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  .ingredientName {
+    color: var(--green);
+    font-size: 1rem;
+    font-weight: 900;
+    margin-top: 1rem;
+  }
+
+  .bottomContainer {
+    background-color: #7f9685;
+    margin: 4rem 0rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    & > div {
+      padding: 2rem;
+    }
+    .bottomContainerContent {
+      p {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: 900;
+        padding-bottom: 1rem;
+        text-align: end;
+      }
+
+      h2 {
+        font-size: 2rem;
+        width: 50rem;
+        text-align: end;
+      }
+    }
+
+    .imgRevealContainer {
+      position: relative;
+      left: 15rem;
+
+      // .thirdImageContainer{
+      //   left: -0rem;
+      //   transform: rotate(-30deg);
+      // }
+
+      .bottleImg {
+        position: absolute;
+        transform: rotate(26deg);
+        right: -2rem;
+        top: 2rem;
+        filter: drop-shadow(10px 60px 40px rgba(81, 80, 80, 0.8));
+        z-index: 89;
+        will-change: transform, opacity;
+      }
+    }
+  }
 }
