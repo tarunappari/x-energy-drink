@@ -20,7 +20,7 @@ const HeroSectionVersion3 = () => {
         scrollTrigger: {
           trigger: bottleRef.current,
           start: "top top+=70",
-          end: "bottom top+=80",
+          end: "bottom top+=30",
           scrub: 1,
           markers: false,
         },

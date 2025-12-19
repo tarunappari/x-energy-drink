@@ -319,8 +319,10 @@
     .contentContainer {
       .content {
         h1 {
-          top: 2rem;
-          font-size: 6rem;
+          top: 3rem;
+          font-size: 5rem;
+          max-width: 98vw;
+          overflow: hidden;
         }
       }
 
@@ -361,6 +363,7 @@
 
         .bottleContent {
           padding: 1rem;
+          padding-left: 2rem;
           padding-bottom: 5rem;
           h1 {
             font-size: 3rem;

@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  padding: 4rem;
+  margin-top: -3rem;
+  width: 70%;
+  border-radius: 1rem;
+
+  .imgContainer {
+    img {
+      width: 35rem;
+      border-radius: 1rem;
+    }
+  }
+}

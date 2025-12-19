@@ -19,10 +19,10 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
           scrollTrigger: {
             trigger: bottleRef.current,
             start: "top top+=60",
-            end: "bottom top+=70",
+            end: "bottom top+=10",
             scrub: 1,
           },
-          y: "85vh",
+          y: "82vh",
           x: "40vw",
           scale: 2.5,
           rotation: 6.5,

@@ -8,6 +8,8 @@ import Ingredients from '@/components/landingpage/Ingredients';
 import UniqueTaste from '@/components/landingpage/UniqueTaste';
 import Why from '@/components/landingpage/Why';
 import React from 'react'
+import Contact from '@/components/landingpage/Contact';
+import Faq from '@/components/landingpage/Faq';
 
 const page = () => {
   return (
@@ -20,6 +22,8 @@ const page = () => {
       <UniqueTaste />
       <Ingredients />
       <Why />
+      <Faq />
+      <Contact />
       <Footer />
     </div>
   )

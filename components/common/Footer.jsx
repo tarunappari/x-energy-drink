@@ -2,6 +2,13 @@ import React from "react";
 import styles from "@/styles/common/Footer.module.scss";
 import Image from "next/image";
 import logo from "@/public/assets/outline.png";
+import {
+  IconBrandFacebook,
+  IconBrandX,
+  IconBrandYoutube,
+  IconBrandInstagram,
+  IconBrandWhatsapp,
+} from "@tabler/icons-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,12 +36,8 @@ const Footer = () => {
                 <Image src={logo} alt="X Energy" width={60} height={60} />
               </div>
               <div className={styles.brandText}>
-                <h3 className={styles.brandName}>X ENERGY</h3>
-                <p className={styles.tagline}>CALMING ENERGY</p>
-                <p className={styles.description}>
-                  A refreshing natural drink that relaxes your mind, boosts
-                  mental clarity and keeps your energy steady.
-                </p>
+                <h3 className={styles.brandName}>X </h3>
+                <p className={styles.tagline}>ELEVATE YOUR SENSES</p>
               </div>
             </div>
 
@@ -44,36 +47,45 @@ const Footer = () => {
                 <h4>Support</h4>
                 <ul>
                   <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#contact">Home</a>
                   </li>
                   <li>
-                    <a href="#faq">FAQ</a>
+                    <a href="#faq">X perience</a>
                   </li>
                   <li>
-                    <a href="#shipping">Shipping</a>
+                    <a href="#shipping">Ingredients</a>
                   </li>
                   <li>
-                    <a href="#returns">Returns</a>
+                    <a href="#returns">FAQ</a>
                   </li>
                 </ul>
               </div>
 
-              <div className={styles.linkColumn}>
+              <div className={`${styles.linkColumn}`}>
                 <h4>Connect</h4>
-                <ul>
-                  <li>
-                    <a href="#instagram">Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#facebook">Facebook</a>
-                  </li>
-                  <li>
-                    <a href="#twitter">Twitter</a>
-                  </li>
-                  <li>
-                    <a href="#youtube">YouTube</a>
-                  </li>
-                </ul>
+
+                <div className={styles.connectDiv}>
+                  <span>
+                    <a href="#instagram">
+                      <IconBrandInstagram stroke={2} />
+                    </a>
+                  </span>
+
+                  <a href="#facebook">
+                    <IconBrandFacebook stroke={2} />
+                  </a>
+
+                  <a href="#twitter">
+                    <IconBrandX stroke={2} />
+                  </a>
+
+                  <a href="#youtube">
+                    <IconBrandYoutube stroke={2} />
+                  </a>
+                  <a href="#youtube">
+                    <IconBrandWhatsapp stroke={2} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
