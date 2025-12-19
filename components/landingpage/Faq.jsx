@@ -3,6 +3,7 @@ import React from "react";
 import view from "@/public/assets/grid/view.webp";
 import Image from "next/image";
 import styles from "@/styles/landingpage/Faq.module.scss";
+import { motion } from "framer-motion";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = React.useState(null);
@@ -33,14 +34,62 @@ const Faq = () => {
         "No. X is formulated to create a calm, alert state—relaxed but not drowsy.",
     },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      // transition: {
+      //   staggerChildren: 0.3,
+      //   delayChildren: 0.2,
+      // },
+    },
+  };
+
+  const leftVariants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeIn",
+        type: "spring",
+        stiffness: 120,
+        damping: 18,
+        mass: 0.8,
+      },
+    },
+  };
+
+  const rightVariants = {
+    hidden: { x: 50, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeIn",
+        type: "spring",
+        stiffness: 120,
+        damping: 18,
+        mass: 0.8,
+      },
+    },
+  };
+
   return (
-    <div
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.7 }}
       className={` ${styles.container} mx-auto flex flex-col md:flex-row items-start justify-center gap-8 px-4 md:px-0`}
     >
-      <div className={styles.imgContainer} >
+      <motion.div variants={leftVariants} className={styles.imgContainer}>
         <Image src={view} alt="vw" />
-      </div>
-      <div className={styles.contentContainer}>
+      </motion.div>
+      <motion.div variants={rightVariants} className={styles.contentContainer}>
         <p className="text-indigo-600 text-sm font-medium">FAQ's</p>
         <h1 className="text-3xl mb-2 font-semibold">Looking for answer?</h1>
         {faqs.map((faq, index) => (
@@ -86,8 +135,8 @@ const Faq = () => {
             </p>
           </div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

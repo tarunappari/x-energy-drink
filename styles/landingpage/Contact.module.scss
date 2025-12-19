@@ -2,9 +2,13 @@
   padding: 2rem;
   margin-left: 2rem;
   margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .letsText {
     color: var(--palegreen);
@@ -18,20 +22,15 @@
   .decor {
     width: 60%;
     height: 3px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      var(--palegreen) 100%,
-    );
+    background: linear-gradient(90deg, transparent 0%, var(--palegreen) 100%);
     margin: 2rem 0;
     margin-top: 3rem;
   }
 
-  .iconsContainer{
-
-    a{
+  .iconsContainer {
+    a {
       transition: 0.2s all;
-      &:hover{
+      &:hover {
         transform: scale(1.1);
       }
     }

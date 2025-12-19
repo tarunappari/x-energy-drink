@@ -16,7 +16,7 @@ const UniqueTaste = () => {
   };
 
   const leftVariants = {
-    hidden: { x: -50, opacity: 0 },
+    hidden: { x: -80, opacity: 0 },
     visible: {
       x: 0,
       opacity: 1,
@@ -32,7 +32,7 @@ const UniqueTaste = () => {
   };
 
   const rightVariants = {
-    hidden: { x: 50, opacity: 0 },
+    hidden: { x: 80, opacity: 0 },
     visible: {
       x: 0,
       opacity: 1,
