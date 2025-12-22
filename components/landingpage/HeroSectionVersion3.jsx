@@ -105,7 +105,7 @@ const HeroSectionVersion3 = () => {
               />
             </motion.h1>
             <motion.h2 variants={itemVariants}>
-              Healthy Energy For the Overactive Mind.
+              Healthy Energy For the Vibrant Mind.
             </motion.h2>
             <motion.p variants={itemVariants}>
               A refreshing natural drink that relaxes your mind,boosts mental
