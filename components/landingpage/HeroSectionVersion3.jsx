@@ -17,18 +17,87 @@ const HeroSectionVersion3 = () => {
     if (!bottleRef.current) return;
 
     const ctx = gsap.context(() => {
-      gsap.to(bottleRef.current, {
-        scrollTrigger: {
-          trigger: bottleRef.current,
-          start: "top top+=70",
-          end: "bottom top+=30",
-          scrub: 1,
-          markers: false,
-        },
-        y: "105vh",
-        x: "-7rem",
-        rotation: -90,
-        ease: "none",
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1700px)", () => {
+        gsap.to(bottleRef.current, {
+          scrollTrigger: {
+            trigger: bottleRef.current,
+            start: "top top+=70",
+            end: "bottom top+=30",
+            scrub: 1,
+            markers: false,
+          },
+          y: "105vh",
+          x: "-7rem",
+          rotation: -90,
+          ease: "none",
+        });
+      });
+
+      // DESKTOP (>= 1024px)
+      mm.add("(min-width: 1025px) and (max-width: 1699px)", () => {
+        gsap.to(bottleRef.current, {
+          scrollTrigger: {
+            trigger: bottleRef.current,
+            start: "top top+=70",
+            end: "bottom top+=30",
+            scrub: 1,
+            markers: false,
+          },
+          y: "100vh",
+          x: "-7rem",
+          rotation: -90,
+          ease: "none",
+        });
+      });
+
+      mm.add("(min-width: 769px) and (max-width: 1024px)", () => {
+        gsap.to(bottleRef.current, {
+          scrollTrigger: {
+            trigger: bottleRef.current,
+            start: "top top+=70",
+            end: "bottom top+=30",
+            scrub: 1,
+            markers: false,
+          },
+          y: "105vh",
+          x: "-150%",
+          rotation: -90,
+          ease: "none",
+        });
+      });
+
+      mm.add("(min-width: 686px) and (max-width: 768px)", () => {
+        gsap.to(bottleRef.current, {
+          scrollTrigger: {
+            trigger: bottleRef.current,
+            start: "top top+=90",
+            end: "bottom top+=90",
+            scrub: 1,
+            markers: false,
+          },
+          y: "93vh",
+          x: "-35%",
+          rotation: -90,
+          ease: "none",
+        });
+      });
+
+      mm.add("(max-width: 685px)", () => {
+        gsap.to(bottleRef.current, {
+          scrollTrigger: {
+            trigger: bottleRef.current,
+            start: "top top+=90",
+            end: "bottom top+=100",
+            scrub: 1,
+            markers: false,
+          },
+          y: "103vh",
+          x: "-30%",
+          rotation: -90,
+          ease: "none",
+        });
       });
     });
 
@@ -125,7 +194,7 @@ const HeroSectionVersion3 = () => {
               y: 0,
               opacity: 1,
               transition: {
-                delay:0.15,
+                delay: 0.15,
                 duration: 0.5,
                 ease: "easeOut",
               },

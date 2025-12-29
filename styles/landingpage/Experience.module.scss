@@ -54,6 +54,10 @@
       justify-content: center;
       gap: 1rem;
       flex: 1;
+
+      .mobilepoint{
+        display: none;
+      }
       & > div {
         display: flex;
         align-self: flex-end;
@@ -139,7 +143,7 @@
           & > div {
             padding: 0.5rem;
             padding-top: 0.75rem;
-            width:11rem;
+            width: 11rem;
             height: 7rem;
           }
         }
@@ -148,12 +152,9 @@
   }
 }
 
-
 @media (max-width: 1350px) {
   .container {
-
     .leftContainer {
-
       .title {
         margin-bottom: 0.5rem;
         h1 {
@@ -178,7 +179,6 @@
   .container {
     height: 37rem;
     .leftContainer {
-
       .title {
         margin-bottom: 0.5rem;
         h1 {
@@ -188,7 +188,7 @@
         h2 {
           font-size: 1.5rem;
         }
-        p{
+        p {
           font-size: 0.95rem;
         }
       }
@@ -196,6 +196,96 @@
       .points {
         & > div {
           margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 685px) {
+  .container {
+    height: 47rem;
+    padding: 4rem 0.5rem;
+    margin: 2rem 0.5rem;
+
+    .leftContainer {
+      .title {
+        margin-bottom: 0.5rem;
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.25rem;
+          color: var(--green);
+        }
+
+        p {
+          width: 100%;
+        }
+      }
+
+      .points {
+        flex-direction: column;
+        gap: 0rem;
+        flex: 1;
+        & > div {
+          display: flex;
+          align-self: center;
+          margin-top: 1rem;
+          gap: 1rem;
+
+          & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0rem;
+            height: 6rem;
+            width: 8rem;
+
+            p {
+              font-size: 0.8rem;
+            }
+
+          }
+        }
+
+        .thunderDiv {
+          display: none;
+        }
+
+        .mobilepoint {
+          display: block;
+          .point {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            p {
+              font-size: 0.8rem;
+              color: var(--green);
+              font-weight: 600;
+              text-align: center;
+            }
+
+            .thunder {
+              display: inline-block;
+              position: relative;
+              top: 0.5rem;
+              height: 2.5rem;
+              aspect-ratio: 0.76;
+              clip-path: polygon(
+                100% 0,
+                23% 46%,
+                46% 44%,
+                15% 69%,
+                88% 33%,
+                60% 37%
+              );
+              background: var(--palegreen);
+            }
+          }
         }
       }
     }

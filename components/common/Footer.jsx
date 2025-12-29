@@ -32,9 +32,6 @@ const Footer = () => {
           <div className={styles.topSection}>
             {/* Logo & Brand */}
             <div className={styles.brandSection}>
-              <div className={styles.logoBox}>
-                <Image src={logo} alt="X Energy" width={60} height={60} />
-              </div>
               <div className={styles.brandText}>
                 <h3 className={styles.brandName}>X </h3>
                 <p className={styles.tagline}>ELEVATE YOUR SENSES</p>
@@ -43,7 +40,7 @@ const Footer = () => {
 
             {/* Navigation Links */}
             <div className={styles.linksSection}>
-              <div className={styles.linkColumn}>
+              <div className={`${styles.linkColumn} ${styles.linkColumnMonileNone}`}>
                 <h4>Support</h4>
                 <ul>
                   <li>

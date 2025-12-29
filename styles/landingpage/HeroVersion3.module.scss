@@ -418,25 +418,43 @@
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 12500px) {
+  .container {
+    .contentContainer {
+      .bottleContainer {
+        .ingredientsContent {
+          padding-left: 4rem;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
   .container {
     .contentContainer {
       padding-top: 8rem;
       .content {
+        width: 99vw;
+
         h1 {
-          top: 4rem;
-          font-size: 3.5rem;
+          width: 90vw;
+          top: 3.5rem;
+          font-size: 4rem;
+          letter-spacing: 0em;
         }
       }
 
       .bottleContainer {
         height: 35rem;
+        grid-template-columns: 50% 50%;
         .bottles {
-          width: 35rem;
+          width: 12rem;
           h1 {
             font-size: 40rem;
             top: -18rem;
-            left: 5%;
+            left: 30%;
           }
           img {
             max-width: 12rem !important;
@@ -444,17 +462,17 @@
           }
           .img1 {
             top: -3rem;
-            right: 19%;
+            right: -60%;
           }
 
           .img2 {
-            top: 20%;
-            right: 37%;
+            top: 17%;
+            right: -107%;
           }
 
           .shadow {
-            bottom: 7rem;
-            left: 35%;
+            bottom: 8rem;
+            left: 105%;
           }
 
           &::before {
@@ -467,7 +485,10 @@
 
         .bottleContent {
           padding: 1rem;
+          padding-left: 3rem;
           padding-bottom: 8rem;
+          width: 50vw;
+          overflow: hidden;
           h1 {
             font-size: 2.5rem;
           }
@@ -492,10 +513,192 @@
         }
 
         .ingredientsContent {
+          display: none;
           padding-left: 3rem;
 
           &::after {
             left: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .contentContainer {
+      padding-top: 6rem;
+      .content {
+        width: 99vw;
+
+        h1 {
+          width: 90vw;
+          top: 20rem;
+          font-size: 3rem;
+          letter-spacing: 0.1em;
+        }
+      }
+
+      .bottleContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        height: auto;
+        padding: 3rem;
+        .bottles {
+          width: 12rem;
+          h1 {
+            font-size: 40rem;
+            top: -23rem;
+            left: -50%;
+          }
+          img {
+            max-width: 12rem !important;
+            height: 22rem !important;
+          }
+          .img1 {
+            top: 0rem;
+            right: 20%;
+          }
+
+          .img2 {
+            top: 10%;
+            right: -30%;
+          }
+
+          .shadow {
+            bottom: -1.5rem;
+            left: 15%;
+          }
+
+          &::before {
+            width: 17rem;
+            height: 17rem;
+            left: -4.5rem;
+            top: 6rem;
+          }
+        }
+
+        .bottleContent {
+          padding-left: 0;
+          padding-bottom: 0rem;
+          padding: 0rem;
+          margin-top: 0rem;
+          width: auto;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h1 {
+            font-size: 2.5rem;
+            text-align: center;
+          }
+
+          h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            width: 80%;
+          }
+
+          p {
+            font-size: 0.95rem;
+            text-align: center;
+            width: 70%;
+          }
+          .contentEndBtn {
+            display: none;
+            .btnImg {
+              width: 2rem;
+            }
+            button {
+              border: 0px solid var(--green);
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    .contentContainer {
+      padding-top: 6rem;
+      margin-bottom: -5rem;
+
+      .content {
+        h1 {
+          width: 90vw;
+          top: 18rem;
+          font-size: 2rem;
+          letter-spacing: 0.02em;
+        }
+        h3 {
+          padding: 0.25rem 1rem;
+          font-size: 0.9rem;
+          margin-bottom: -3rem;
+        }
+      }
+
+      .bottleContainer {
+        gap: 1rem;
+        height: auto;
+        padding: 3rem;
+        .bottles {
+          width: 12rem;
+          h1 {
+            font-size: 35rem;
+            top: -20rem;
+            left: -33%;
+          }
+          img {
+            max-width: 10rem !important;
+            height: 18rem !important;
+          }
+          .img1 {
+            top: 2rem;
+            right: 20%;
+          }
+
+          .img2 {
+            top: 20%;
+            right: -13%;
+          }
+
+          .shadow {
+            bottom: -3.5rem;
+            left: 25%;
+          }
+
+          &::before {
+            width: 17rem;
+            height: 17rem;
+            left: -4.5rem;
+            top: 6rem;
+          }
+        }
+
+        .bottleContent {
+          h1 {
+            font-size: 2.5rem;
+            text-align: center;
+          }
+
+          h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            width: 100%;
+          }
+
+          p {
+            font-size: 0.95rem;
+            text-align: center;
+            width: 100%;
           }
         }
       }

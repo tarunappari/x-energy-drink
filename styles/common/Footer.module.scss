@@ -41,24 +41,6 @@
   .brandSection {
     display: flex;
     flex-direction: column;
-    .logoBox {
-      display: none;
-      align-items: center;
-      justify-content: flex-start;
-      position: relative;
-
-      img {
-        
-        position: absolute;
-        width: 5rem;
-        height: 5rem;
-        object-fit: contain;
-        filter: brightness(0) invert(1);
-        bottom: 0rem;
-        z-index: 99;
-      }
-    }
-
     .brandText {
       display: flex;
       flex-direction: column;
@@ -78,13 +60,6 @@
         color: var(--white);
         margin-bottom: 1rem;
         letter-spacing: 0.1em;
-      }
-
-      .description {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.8);
-        max-width: 400px;
       }
     }
   }
@@ -154,8 +129,6 @@
       .connectDiv {
         display: flex;
         gap: 1rem;
-
-        
 
         a {
           color: rgba(255, 255, 255, 0.7);
@@ -230,89 +203,56 @@
 @media (max-width: 1200px) {
   .container {
     .topSection {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .linksSection {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 3rem 1.5rem 1.5rem;
-
-    .topSection {
-      gap: 2rem;
-    }
-
-    .brandSection {
-      .brandText {
-        .brandName {
-          font-size: 1.5rem;
-        }
-
-        .description {
-          font-size: 0.875rem;
-        }
-      }
-    }
-
-    .linksSection {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-
-      .linkColumn {
-        h4 {
-          font-size: 0.9rem;
-        }
-
-        ul li a {
-          font-size: 0.85rem;
-        }
-      }
-    }
-
-    .bottomSection {
-      flex-direction: column;
-      align-items: flex-start;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
+    }
 
-      .legalLinks {
-        flex-wrap: wrap;
+    .linksSection {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .linkColumnMonileNone {
+        display: none;
       }
     }
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .container {
-    padding: 2rem 1rem 1rem;
+    margin-top: -3rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .container {
+    .topSection {
+      display: flex;
+      flex-direction: column;
+    }
 
     .brandSection {
-      .logoBox img {
-        width: 50px;
-        height: 50px;
-      }
-
       .brandText {
+        
         .brandName {
-          font-size: 1.25rem;
+          font-size: 3rem;
         }
 
         .tagline {
-          font-size: 0.75rem;
+          font-size: 0.8rem;
+          letter-spacing: 0.1em;
         }
       }
     }
 
-    .bottomSection {
-      .copyright p,
-      .legalLinks a {
-        font-size: 0.75rem;
+    .linksSection {
+      h4{
+        display: none;
+      }
+      .linkColumnMonileNone {
+        display: none;
       }
     }
   }

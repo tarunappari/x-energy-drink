@@ -38,7 +38,7 @@ export function LogoCloud() {
           <div
             key={item.name}
             className={[
-              "relative flex flex-col items-center justify-center px-6 py-10 md:p-10",
+              `relative flex flex-col items-center justify-center px-6 py-10 md:p-10 ${styles.ingredientContainer}`,
               "border-b border-neutral-200",
               row === 0 && "border-t border-neutral-200",
               !isLastColumn && "md:border-r",

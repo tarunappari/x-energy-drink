@@ -36,3 +36,46 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+
+    .togetherText {
+      color: var(--green);
+      font-weight: 500;
+      margin-left: 5rem;
+    }
+  }
+}
+
+@media (max-width: 558px) {
+  .container {
+    margin-left: 0;
+    padding: 0.5rem;
+    margin-top: 2rem;
+
+    & > div {
+      justify-content: center;
+      margin-left: 0.25rem;
+      height: 15rem;
+    }
+
+    .togetherText {
+      margin-left: 5rem;
+    }
+
+    .decor {
+      display: none;
+    }
+
+    .iconsContainer {
+      a {
+        transition: 0.2s all;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

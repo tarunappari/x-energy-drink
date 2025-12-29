@@ -51,3 +51,27 @@
     }
   }
 }
+
+@media (max-width: 1250px) {
+  .logoWrap {
+    .container {
+      padding-left: 1rem;
+
+      img {
+        width: 3rem;
+      }
+
+      .logoText {
+        padding-bottom: 1rem;
+        .brandName {
+          font-size: 2rem;
+          margin-bottom: -0.75rem;
+        }
+
+        .edge {
+          height: 104px;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
-  padding: 2rem;
-  margin-top: 0rem;
+  padding: 2rem 1rem;
+  margin-top: -2rem;
 
   .titleContent {
     padding: 3rem 5rem;
@@ -74,6 +74,17 @@
 
 @media (max-width: 1550px) {
   .container {
+    .titleContent {
+      padding: 1rem 2rem;
+      h2 {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+
     .bottomContainer {
       .bottomContainerContent {
         h2 {
@@ -86,11 +97,6 @@
         position: relative;
         left: 10rem;
 
-        // .thirdImageContainer{
-        //   left: -0rem;
-        //   transform: rotate(-30deg);
-        // }
-
         .bottleImg {
           position: absolute;
           transform: rotate(26deg);
@@ -99,6 +105,163 @@
           filter: drop-shadow(15px 15px 20px rgb(103, 132, 108, 0.7));
           z-index: 89;
           will-change: transform, opacity;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1210px) {
+  .container {
+    .bottomContainer {
+      margin: 4rem 0rem;
+      margin-top: 5rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & > div {
+        padding: 1rem;
+        width: 100%;
+      }
+
+      .bottomContainerContent {
+        p {
+          font-size: 1.1rem;
+          text-align: center;
+          padding-top: 1rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+          width: auto;
+          text-align: center;
+        }
+      }
+
+      .imgRevealContainer {
+        position: relative;
+        left: 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .bottleImg {
+          position: absolute;
+          transform: rotate(27deg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    overflow: hidden;
+    margin-top: -1rem;
+    .titleContent {
+      padding: 1rem;
+      h2 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        text-align: center;
+      }
+      p {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+      }
+    }
+
+    .ingredientContainer {
+      padding: 1rem;
+    }
+
+    .ingredientName {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .thirdImageContainer {
+      display: none;
+    }
+
+    .imgMainContainer {
+      width: 100%;
+      padding-left: 20%;
+    }
+  }
+}
+
+@media (max-width: 655px) {
+  .container {
+    .titleContent {
+      padding: 1rem;
+      h2 {
+        font-size: 1.5rem;
+        text-align: start;
+      }
+      p {
+        text-align: start;
+      }
+    }
+
+    .bottomContainer {
+      margin: 3rem 0rem;
+      margin-top: 4rem;
+
+      & > div {
+        padding: 1rem;
+      }
+
+      .bottomContainerContent {
+        p {
+          font-size: 1.1rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .imgMainContainer {
+        padding-left: 30%;
+        margin-top: -2rem;
+        .imgContainer {
+          width: 10rem;
+          height: 13rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  .container {
+    .bottomContainer {
+      .imgMainContainer {
+        padding-left: 45%;
+
+        .imgContainer {
+          width: 10rem;
+          height: 13rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 395px) {
+  .container {
+    .bottomContainer {
+      .imgMainContainer {
+        padding-left: 45%;
+        .imgContainer {
+          width: 9rem;
+          height: 11rem;
+        }
+        .imgContainer1 {
+          left: 11rem;
         }
       }
     }

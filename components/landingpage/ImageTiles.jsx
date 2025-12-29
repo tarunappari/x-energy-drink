@@ -14,7 +14,7 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
-      mm.add("(min-width: 1700px)", () => {
+      mm.add("(min-width: 1700px) and (max-width: 3699px)", () => {
         gsap.to(bottleRef.current, {
           scrollTrigger: {
             trigger: bottleRef.current,
@@ -32,7 +32,7 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
       });
 
       // DESKTOP (>= 1024px)
-      mm.add("(min-width: 1024px) and (max-width: 1699px)", () => {
+      mm.add("(min-width: 1300px) and (max-width: 1699px)", () => {
         gsap.to(bottleRef.current, {
           scrollTrigger: {
             trigger: bottleRef.current,
@@ -40,7 +40,7 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
             end: "bottom top+=40",
             scrub: 1,
           },
-          y: "100vh",
+          y: "93vh",
           x: "42vw",
           scale: 1.75,
           rotation: 6,
@@ -49,35 +49,35 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
         });
       });
 
-      mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
+      mm.add("(min-width: 1211px) and (max-width: 1299px)", () => {
         gsap.to(bottleRef.current, {
           scrollTrigger: {
             trigger: bottleRef.current,
             start: "top top+=60",
-            end: "bottom top+=70",
+            end: "bottom top+=40",
             scrub: 1,
           },
           y: "85vh",
-          x: "25vw",
-          scale: 1.3,
-          rotation: -10,
+          x: "38.5vw",
+          scale: 1.75,
+          rotation: 6,
           opacity: 1,
           ease: "none",
         });
       });
 
-      mm.add("(max-width: 767px)", () => {
+      mm.add("(min-width: 1101px) and (max-width: 1210px)", () => {
         gsap.to(bottleRef.current, {
           scrollTrigger: {
             trigger: bottleRef.current,
-            start: "top top+=50",
-            end: "bottom top+=60",
+            start: "top top+=60",
+            end: "bottom top+=40",
             scrub: 1,
           },
-          y: "70vh",
-          x: "10vw",
-          scale: 1.2,
-          rotation: -5,
+          y: "85vh",
+          x: "8.5vw",
+          scale: 1.55,
+          rotation: 6,
           opacity: 1,
           ease: "none",
         });
@@ -174,14 +174,14 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
 
   return (
     <motion.div
-      className="relative flex items-center justify-center w-48 h-70 my-8"
+      className={`relative flex items-center justify-center w-48 h-70 my-8 ${styles.imgMainContainer}`}
       variants={containerVariants}
       initial="initial"
       animate="animate"
     >
       {/* Left Image */}
       <motion.div
-        className="absolute w-48 h-58 origin-bottom-right overflow-hidden rounded-xl shadow-lg bg-white"
+        className={`absolute w-48 h-58 origin-bottom-right overflow-hidden rounded-xl shadow-lg bg-white ${styles.imgContainer} ${styles.imgContainer1}`}
         variants={leftImageVariants}
         whileHover="hover"
         animate="animate"
@@ -198,7 +198,7 @@ export default function ImageReveal({ leftImage, middleImage, rightImage }) {
 
       {/* Middle Image */}
       <motion.div
-        className="absolute w-42 h-58 origin-bottom-left overflow-hidden rounded-xl shadow-lg bg-white"
+        className={`absolute w-42 h-58 origin-bottom-left overflow-hidden rounded-xl shadow-lg bg-white ${styles.imgContainer}`}
         variants={middleImageVariants}
         whileHover="hover"
         animate="animate"

@@ -5,7 +5,6 @@ import { Box, Leaf } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Experience = () => {
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -68,13 +67,22 @@ const Experience = () => {
                   <p>No anxiety spike</p>
                 </div>
               </motion.div>
-              <motion.div variants={itemVariants}>
+              <motion.div className={styles.thunderDiv} variants={itemVariants}>
                 <span className={styles.thunder}></span>
                 <div>
                   <p>Zero sugar,</p>
                   <p> Zero crash</p>
                 </div>
               </motion.div>
+            </div>
+            <div className={styles.mobilepoint}>
+              <div className={styles.point}>
+                <span className={styles.thunder}></span>
+                <div>
+                  <p>Zero sugar,</p>
+                  <p> Zero crash</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
