@@ -93,7 +93,7 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className={styles.bottomSection}>
             <div className={styles.copyright}>
-              <p>© {currentYear} GVR Beverages · Hyderabad, India</p>
+              <p>© {currentYear}Unit of GVR Beverages · Hyderabad, India</p>
             </div>
             <div className={styles.legalLinks}>
               <a href="#privacy">Privacy Policy</a>
