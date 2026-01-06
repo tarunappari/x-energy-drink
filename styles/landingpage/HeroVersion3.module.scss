@@ -629,7 +629,7 @@
   .container {
     .contentContainer {
       padding-top: 6rem;
-      margin-bottom: 3rem;
+      margin-bottom: -5rem;
 
       .content {
         h1 {
@@ -700,6 +700,11 @@
             text-align: center;
             width: 100%;
           }
+        }
+
+        &::after {
+          
+          z-index: -9;
         }
       }
     }

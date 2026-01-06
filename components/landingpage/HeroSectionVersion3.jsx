@@ -93,7 +93,7 @@ const HeroSectionVersion3 = () => {
             scrub: 1,
             markers: false,
           },
-          y: "123vh",
+          y: "103vh",
           x: "-30%",
           rotation: -90,
           ease: "none",
