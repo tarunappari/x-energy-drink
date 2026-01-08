@@ -1,5 +1,4 @@
 import Logo from '@/components/common/Logo';
-import Navbar from '@/components/common/Navbar';
 import NavbarVersion2 from '@/components/common/NavbarVersion2';
 import Footer from '@/components/common/Footer';
 import Experience from '@/components/landingpage/Experience';

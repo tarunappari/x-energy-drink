@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Home, User, Briefcase, FileText } from "lucide-react";
+import { Home, BadgeInfo , Leaf , Send  } from "lucide-react";
 
 const NavbarVersion2 = () => {
   const items = [
-    { name: "Home", url: "#", icon: Home },
-    { name: "About", url: "#", icon: User },
-    { name: "Ingredients", url: "#", icon: Briefcase },
-    { name: "Contact", url: "#", icon: FileText },
+    { name: "Home", url: "#home", icon: Home },
+    { name: "Xperience", url: "#experience", icon: BadgeInfo  },
+    { name: "Ingredients", url: "#ingredients", icon: Leaf  },
+    { name: "Contact", url: "#contact", icon: Send  },
   ];
 
   const [activeTab, setActiveTab] = useState(items[0].name);
@@ -23,6 +23,21 @@ const NavbarVersion2 = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Smooth scroll handler
+  const handleClick = (e, url) => {
+    e.preventDefault();
+    const targetId = url.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop - 100; // 100px offset for navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div
       className={`fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-99 mb-6 sm:pt-6 `}
@@ -36,7 +51,7 @@ const NavbarVersion2 = () => {
               key={item.name}
               href={item.url}
               onClick={(e) => {
-                e.preventDefault();
+                handleClick(e, item.url);
                 setActiveTab(item.name);
               }}
               className={`relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors ${

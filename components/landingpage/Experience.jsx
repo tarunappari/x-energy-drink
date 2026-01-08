@@ -29,7 +29,7 @@ const Experience = () => {
   };
 
   return (
-    <div id="experience-section" className={styles.container}>
+    <div id="experience" className={styles.container}>
       <motion.div
         variants={containerVariants}
         initial="hidden"

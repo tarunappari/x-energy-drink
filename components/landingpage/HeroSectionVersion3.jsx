@@ -19,7 +19,7 @@ const HeroSectionVersion3 = () => {
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
-      mm.add("(min-width: 1700px)", () => {
+      mm.add("(min-width: 1700px) and (min-height:750px)", () => {
         gsap.to(bottleRef.current, {
           scrollTrigger: {
             trigger: bottleRef.current,
@@ -29,44 +29,88 @@ const HeroSectionVersion3 = () => {
             markers: false,
           },
           y: "105vh",
-          x: "-7rem",
+          x: "-9rem",
           rotation: -90,
           ease: "none",
         });
       });
 
       // DESKTOP (>= 1024px)
-      mm.add("(min-width: 1025px) and (max-width: 1699px)", () => {
-        gsap.to(bottleRef.current, {
-          scrollTrigger: {
-            trigger: bottleRef.current,
-            start: "top top+=70",
-            end: "bottom top+=30",
-            scrub: 1,
-            markers: false,
-          },
-          y: "100vh",
-          x: "-7rem",
-          rotation: -90,
-          ease: "none",
-        });
-      });
+      mm.add(
+        "(min-width: 1025px) and (max-width: 1699px) and (max-height:749px)",
+        () => {
+          gsap.to(bottleRef.current, {
+            scrollTrigger: {
+              trigger: bottleRef.current,
+              start: "top top+=70",
+              end: "bottom top+=30",
+              scrub: 1,
+              markers: false,
+            },
+            y: "47rem",
+            x: "-7rem",
+            rotation: -90,
+            ease: "none",
+          });
+        }
+      );
 
-      mm.add("(min-width: 769px) and (max-width: 1024px)", () => {
-        gsap.to(bottleRef.current, {
-          scrollTrigger: {
-            trigger: bottleRef.current,
-            start: "top top+=70",
-            end: "bottom top+=30",
-            scrub: 1,
-            markers: false,
-          },
-          y: "105vh",
-          x: "-150%",
-          rotation: -90,
-          ease: "none",
-        });
-      });
+      mm.add(
+        "(min-width: 1025px) and (max-width: 1699px) and (min-height:750px)",
+        () => {
+          gsap.to(bottleRef.current, {
+            scrollTrigger: {
+              trigger: bottleRef.current,
+              start: "top top+=70",
+              end: "bottom top+=30",
+              scrub: 1,
+              markers: false,
+            },
+            y: "100vh",
+            x: "-7rem",
+            rotation: -90,
+            ease: "none",
+          });
+        }
+      );
+
+      mm.add(
+        "(min-width: 769px) and (max-width: 1024px) and (max-height:749px)",
+        () => {
+          gsap.to(bottleRef.current, {
+            scrollTrigger: {
+              trigger: bottleRef.current,
+              start: "top top+=70",
+              end: "bottom top+=30",
+              scrub: 1,
+              markers: false,
+            },
+            y: "47rem",
+            x: "-160%",
+            rotation: -90,
+            ease: "none",
+          });
+        }
+      );
+
+      mm.add(
+        "(min-width: 769px) and (max-width: 1024px) and (min-height:750px)",
+        () => {
+          gsap.to(bottleRef.current, {
+            scrollTrigger: {
+              trigger: bottleRef.current,
+              start: "top top+=70",
+              end: "bottom top+=30",
+              scrub: 1,
+              markers: false,
+            },
+            y: "105vh",
+            x: "-150%",
+            rotation: -90,
+            ease: "none",
+          });
+        }
+      );
 
       mm.add("(min-width: 686px) and (max-width: 768px)", () => {
         gsap.to(bottleRef.current, {
@@ -84,7 +128,23 @@ const HeroSectionVersion3 = () => {
         });
       });
 
-      mm.add("(max-width: 685px)", () => {
+      mm.add("(max-width: 685px) and (max-height:709px)", () => {
+        gsap.to(bottleRef.current, {
+          scrollTrigger: {
+            trigger: bottleRef.current,
+            start: "top top+=90",
+            end: "bottom top+=100",
+            scrub: 1,
+            markers: false,
+          },
+          y: "45rem",
+          x: "-30%",
+          rotation: -90,
+          ease: "none",
+        });
+      });
+
+      mm.add("(max-width: 685px) and (min-height:710px)", () => {
         gsap.to(bottleRef.current, {
           scrollTrigger: {
             trigger: bottleRef.current,

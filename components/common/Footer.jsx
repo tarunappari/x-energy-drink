@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "@/styles/common/Footer.module.scss";
-import Image from "next/image";
-import logo from "@/public/assets/outline.png";
 import {
   IconBrandFacebook,
   IconBrandX,
@@ -47,13 +45,13 @@ const Footer = () => {
                     <a href="#contact">Home</a>
                   </li>
                   <li>
-                    <a href="#faq">X perience</a>
+                    <a href="#experience">X perience</a>
                   </li>
                   <li>
-                    <a href="#shipping">Ingredients</a>
+                    <a href="#ingredients">Ingredients</a>
                   </li>
                   <li>
-                    <a href="#returns">FAQ</a>
+                    <a href="#faq">FAQ</a>
                   </li>
                 </ul>
               </div>
