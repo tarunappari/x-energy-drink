@@ -48,7 +48,7 @@ const UniqueTaste = () => {
   };
 
   return (
-    <div>
+    <div id="unique-taste">
       <motion.div
         variants={containerVariants}
         initial="hidden"

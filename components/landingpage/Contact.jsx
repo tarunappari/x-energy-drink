@@ -29,6 +29,7 @@ const Contact = () => {
   };
   return (
     <motion.div
+      id="contact"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

@@ -45,7 +45,7 @@ const Ingredients = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div id="ingredients" className={styles.container}>
       <motion.div
         variants={containerVariants}
         initial="hidden"

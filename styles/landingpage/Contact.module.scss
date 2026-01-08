@@ -8,15 +8,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 2rem;
   }
 
   .letsText {
     color: var(--palegreen);
   }
+
+  .togetherContainer{
+    padding-bottom: 1rem;
+  }
   .togetherText {
     color: var(--green);
     font-weight: 500;
     margin-left: 7rem;
+    
   }
 
   .decor {

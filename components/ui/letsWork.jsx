@@ -207,7 +207,7 @@ export function LetsWorkTogether() {
                   Let's work
                 </span>
               </span>
-              <span className="block overflow-hidden">
+              <span className={`block overflow-hidden ${styles.togetherContainer}`}>
                 <span
                   className="block transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] delay-75"
                   style={{

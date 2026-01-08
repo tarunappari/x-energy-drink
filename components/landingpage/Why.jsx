@@ -31,6 +31,7 @@ const Why = () => {
   };
   return (
     <motion.div
+      id="why"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

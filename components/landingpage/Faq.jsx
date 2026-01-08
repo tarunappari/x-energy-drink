@@ -80,6 +80,7 @@ const Faq = () => {
 
   return (
     <motion.div
+      id="faq"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

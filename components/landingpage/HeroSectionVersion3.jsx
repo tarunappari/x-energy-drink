@@ -129,6 +129,7 @@ const HeroSectionVersion3 = () => {
 
   return (
     <motion.div
+      id="home"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
