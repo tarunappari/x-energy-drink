@@ -38,11 +38,13 @@ const Footer = () => {
 
             {/* Navigation Links */}
             <div className={styles.linksSection}>
-              <div className={`${styles.linkColumn} ${styles.linkColumnMonileNone}`}>
+              <div
+                className={`${styles.linkColumn} ${styles.linkColumnMonileNone}`}
+              >
                 <h4>Support</h4>
                 <ul>
                   <li>
-                    <a href="#contact">Home</a>
+                    <a href="#">Home</a>
                   </li>
                   <li>
                     <a href="#experience">X perience</a>
@@ -60,25 +62,29 @@ const Footer = () => {
                 <h4>Connect</h4>
 
                 <div className={styles.connectDiv}>
-                  <span>
+                  {/* <span>
                     <a href="#instagram">
                       <IconBrandInstagram stroke={2} />
                     </a>
-                  </span>
+                  </span> */}
 
-                  <a href="#facebook">
-                    <IconBrandFacebook stroke={2} />
+                  <a href="https://wa.me/917337473800" target="_blank">
+                    <IconBrandWhatsapp stroke={2} />
                   </a>
-
-                  <a href="#twitter">
+                  <a
+                    href="https://www.instagram.com/xcalmingenergy/"
+                    target="_blank"
+                  >
+                    <IconBrandInstagram stroke={2} />
+                  </a>
+                  <a href="https://x.com/XCalmingEnergy" target="_blank">
                     <IconBrandX stroke={2} />
                   </a>
-
-                  <a href="#youtube">
-                    <IconBrandYoutube stroke={2} />
-                  </a>
-                  <a href="#youtube">
-                    <IconBrandWhatsapp stroke={2} />
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61585629167267"
+                    target="_blank"
+                  >
+                    <IconBrandFacebook stroke={2} />
                   </a>
                 </div>
               </div>
@@ -93,10 +99,13 @@ const Footer = () => {
             <div className={styles.copyright}>
               <p>© {currentYear}Unit of GVR Beverages · Hyderabad, India</p>
             </div>
-            <div className={styles.legalLinks}>
+            {/* <div className={styles.legalLinks}>
               <a href="#privacy">Privacy Policy</a>
               <span className={styles.separator}>·</span>
               <a href="#terms">Terms of Service</a>
+            </div> */}
+            <div className={styles.legalLinks}>
+              <a href="#privacy">By Tarun Appari🖤</a>
             </div>
           </div>
         </div>

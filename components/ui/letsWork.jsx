@@ -156,20 +156,17 @@ export function LetsWorkTogether() {
           </button>
 
           <div className={` ${styles.iconsContainer} flex gap-2 items-center justify-center`}>
-            <a href="">
+            <a href="https://wa.me/917337473800" target="_blank" >
               <IconBrandWhatsapp stroke={2}/>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/xcalmingenergy/" target="_blank">
               <IconBrandInstagram stroke={2}/>
             </a>
-            <a href="">
+            <a href="https://x.com/XCalmingEnergy" target="_blank">
               <IconBrandX stroke={2}/>
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/profile.php?id=61585629167267" target="_blank">
               <IconBrandFacebook stroke={2}/>
-            </a>
-            <a href="">
-              <IconBrandYoutube stroke={2}/>
             </a>
           </div>
         </div>
