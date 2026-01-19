@@ -156,7 +156,7 @@ export function LetsWorkTogether() {
           </button>
 
           <div className={` ${styles.iconsContainer} flex gap-2 items-center justify-center`}>
-            <a href="https://wa.me/917337473800" target="_blank" >
+            <a href="https://wa.me/919676473800" target="_blank" >
               <IconBrandWhatsapp stroke={2}/>
             </a>
             <a href="https://www.instagram.com/xcalmingenergy/" target="_blank">

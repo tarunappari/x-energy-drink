@@ -68,7 +68,7 @@ const Footer = () => {
                     </a>
                   </span> */}
 
-                  <a href="https://wa.me/917337473800" target="_blank">
+                  <a href="https://wa.me/919676473800" target="_blank">
                     <IconBrandWhatsapp stroke={2} />
                   </a>
                   <a
