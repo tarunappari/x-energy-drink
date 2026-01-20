@@ -16,7 +16,7 @@ export function LetsWorkTogether() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [isButtonHovered, setIsButtonHovered] = useState(false);
   const [copied, setCopied] = useState(false);
-  const EMAIL = "hello@example.com";
+  const EMAIL = "info@gvrbeverages.com";
 
   const handleCopyMail = async () => {
     try {
